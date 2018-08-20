@@ -15,22 +15,22 @@ class StrUtilsTests extends TestCase
     public function testIsBold()
     {
         $testStr = new StrUtils('php is awesome !');
-        $this->assertEquals($testStr->bold(),$testStr->bold());
+        $this->assertEquals('<Strong>php is awesome !</Strong>',$testStr->bold());
     }
     public function testIsItalic()
     {
         $testStr = new StrUtils('php is awesome !');
-        $this->assertEquals($testStr->italic(),$testStr->italic());
+        $this->assertEquals('<i>php is awesome !</i>',$testStr->italic());
     }
     public function testIsUnderline()
     {
         $testStr = new StrUtils('php is awesome !');
-        $this->assertEquals($testStr->underline(),$testStr->underline());
+        $this->assertEquals('<u>php is awesome !</u>',$testStr->underline());
     }
     public function testIsCapitalize()
     {
         $testStr = new StrUtils('php is awesome !');
-        $this->assertEquals($testStr->capitalize(),$testStr->capitalize());
+        $this->assertEquals(strtoupper('php is awesome !'),$testStr->capitalize());
     }
 }
 ?>
