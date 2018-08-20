@@ -15,7 +15,7 @@ $myStr = new StrUtils('php is awesome !');
 
 echo $myStr->bold().'<br>';
 echo $myStr->italic().'<br>';
-echo $myStr->underline();
+echo $myStr->underline().'<br>';
 echo $myStr->capitalize().'<br>';
 echo $myStr->uglify().'<br>';
 ?>

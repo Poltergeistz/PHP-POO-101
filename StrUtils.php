@@ -1,30 +1,25 @@
 <?php
 class StrUtils{
-    private $str;
+    private $_str;
 
-    public function __construct($str){
-        $this->str = $str;
-        $this->bold = '<Strong>'.$str.'</Strong>';
-        $this->italic = '<i>'.$str.'</i>';
-        $this->underline = '<p style="text-decoration:underline;">'.$str.'</p>';
-        $this->capitalize = strtoupper($str);
-        $this->uglify = strtoupper('<p style="text-decoration:underline;"><Strong><i>'.$str.'</i></Strong></p>');
+    public function __construct($_str){
+        $this->str = $_str;
     }
 
     public function bold(){
-        return $this->bold;
+        return '<Strong>'.$this->str.'</Strong>';
     }
     public function italic(){
-        return $this->italic;
+        return '<i>'.$this->str.'</i>';
     }
     public function underline(){
-        return $this->underline;
+        return '<u>'.$this->str.'</u>';
 
     }
     public function capitalize(){
-        return $this->capitalize;
+        return strtoupper($this->str);
     }
     public function uglify(){
-        return $this->uglify;
+        return '<Strong><i><u>'.$this->str.'</Strong></i></u>';
     }
 }
